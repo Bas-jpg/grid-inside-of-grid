@@ -1,0 +1,110 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: sans-serif;
+  font-size: 20px;
+}
+
+.container {
+  display: grid;
+  background-color: beige;
+  gap: 10px;
+  max-width: 1300px;
+  text-align: center;
+  grid-template-areas:
+    "hdr hdr hdr hdr hdr hdr hdr"
+    "las li li li li li ras"
+    "ftr ftr ftr ftr ftr ftr ftr";
+}
+
+header {
+  grid-area: hdr;
+  border: 2px solid orange;
+  border-radius: 5px;
+  height: 70px;
+}
+
+footer {
+  grid-area: ftr;
+  border: 2px solid orange;
+  border-radius: 5px;
+  height: 70px;
+}
+
+.leftAside {
+  grid-area: las;
+  border: 2px solid orange;
+  border-radius: 5px;
+}
+
+.rightAside {
+  grid-area: ras;
+  border: 2px solid orange;
+  border-radius: 5px;
+}
+
+.listing {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  list-style: none;
+  gap: 10px;
+  grid-area: li;
+  border: 2px solid orange;
+  border-radius: 5px;
+}
+
+.listing li {
+  border: 2px solid orange;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.listing li h2 {
+  background-color: orange;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+.listing .cta {
+  margin-top: auto;
+  border-top: 2px solid orange;
+  padding: 10px;
+  text-align: center;
+}
+
+.listing .cta a {
+  text-decoration: none;
+  color: orange;
+  font-size: 30px;
+}
+
+.listing .body {
+  padding: 10px;
+}
+
+.cta {
+  transition: 0.5s;
+}
+
+.cta:hover {
+  background-color: rgb(255, 221, 158);
+}
+
+
+@media screen and (max-width: 700px) {
+    .rightAside {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        grid-template-areas:
+        "hdr"
+        "las"
+        "li"
+        "ftr";
+    }
+}
