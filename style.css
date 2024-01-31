@@ -22,6 +22,7 @@ header {
   border: 2px solid orange;
   border-radius: 5px;
   height: 70px;
+  padding: 5px;
 }
 
 footer {
@@ -29,18 +30,21 @@ footer {
   border: 2px solid orange;
   border-radius: 5px;
   height: 70px;
+  padding: 5px;
 }
 
 .leftAside {
   grid-area: las;
   border: 2px solid orange;
   border-radius: 5px;
+  padding: 5px;
 }
 
 .rightAside {
   grid-area: ras;
   border: 2px solid orange;
   border-radius: 5px;
+  padding: 5px;
 }
 
 .listing {
@@ -49,8 +53,6 @@ footer {
   list-style: none;
   gap: 10px;
   grid-area: li;
-  border: 2px solid orange;
-  border-radius: 5px;
 }
 
 .listing li {
